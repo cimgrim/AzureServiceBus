@@ -1,12 +1,14 @@
 from azure_manager import AzureServiceBusManager
 
+# dit zijn vaste variabelen (voor je account)
 subscription_id = 'ac58b4ec-0810-44c4-9167-58a33cd159cd'
 manager = AzureServiceBusManager(subscription_id)
-
-
 resource_group_name = 'l.grim-rg'
 namespace_name = 'aardappel'
-topic_name = 'automationTest'
+
+# dit zijn flexibele variabelen voor topic en subscription
+## TODO: Wat als er al een topic of subscription bestaat?
+topic_name = 'automationTest' 
 subscription_name = 'subOne'
 
 # Create a topic

@@ -6,6 +6,7 @@ class AzureServiceBusManager:
         self.subscription_id = subscription_id
         self.credential = DefaultAzureCredential()
 
+    # function voor maken van topic
     def create_topic(self, resource_group_name, namespace_name, topic_name):
         with ServiceBusManagementClient(self.credential, self.subscription_id) as client:
             client.topics.create_or_update(
@@ -16,6 +17,8 @@ class AzureServiceBusManager:
             )
             print(f"Topic '{topic_name}' created successfully.")
 
+    
+    # function voor maken van subscription
     def create_subscription(self, resource_group_name, namespace_name, topic_name, subscription_name):
         with ServiceBusManagementClient(self.credential, self.subscription_id) as client:
             client.subscriptions.create_or_update(
