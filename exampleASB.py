@@ -1,5 +1,7 @@
 from azure_manager import AzureServiceBusManager
 
+#change
+
 # dit zijn vaste variabelen (voor je account)
 subscription_id = 'ac58b4ec-0810-44c4-9167-58a33cd159cd'
 manager = AzureServiceBusManager(subscription_id)
